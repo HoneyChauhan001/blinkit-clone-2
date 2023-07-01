@@ -28,10 +28,13 @@ header{
     }
 }
 
-@media(min-width: 1020px){
+
+
+@media (min-width: 1020px){
     header>.search-bar{
         display: none;
     }
+    
 }
 
 .logo{
@@ -46,7 +49,7 @@ header{
     background-color: rgb(252,252,252);
 }
 
-.location{
+header>.my-nav>.location{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -55,9 +58,33 @@ header{
     flex-direction: column;
     cursor: pointer;
 }
+ 
+@media (max-width: 1020px){
+    header>.my-nav>.location{
+        display: none;
+    }
+}
+
+header>.location{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 45px;
+    width: 100%;
+    font-size: 16px;
+    flex-direction: column;
+    cursor: pointer;
+    background-color: white;
+}
+
+@media (min-width: 1020px){
+    header>.location{
+        display: none;
+    } 
+}
 
 @media (min-width: 1260px){
-    .location{
+    header>.my-nav>.location{
         width: 320px;
     }
 }
@@ -65,6 +92,7 @@ header{
 .location:hover{
     background-color: rgb(252,252,252);
 }
+
 
 .location-subcontainer{
     align-items: flex-start;
@@ -175,6 +203,16 @@ header>.my-nav>.search-bar{
     align-items: center;
     margin-inline: auto;
     padding-bottom: 7px;
+}
+
+.hero-section-1>img{
+    width: 84%;
+}
+
+@media (max-width: 1020px) {
+    .hero-section-1>img{
+        width: 100%;
+    }
 }
 
 .my-container{
